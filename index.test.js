@@ -15,4 +15,24 @@ describe('Time to words', () => {
     const timeInWords = convertTimeToWords('2:45');
     expect(timeInWords).toBe('quarter to three');
   });
+
+  it('Handles normal case', () => {
+    const timeInWords = convertTimeToWords('2:03');
+    expect(timeInWords).toBe('three past two');
+  });
+
+  it('Handles normal case', () => {
+    const timeInWords = convertTimeToWords('15:03');
+    expect(timeInWords).toBe('three past three');
+  });
+
+  it('Handles normal case', () => {
+    const timeInWords = convertTimeToWords('18:45');
+    expect(timeInWords).toBe('quarter to seven');
+  });
+
+  it('Handles normal case', () => {
+    const timeInWords = convertTimeToWords('18:00');
+    expect(timeInWords).toBe('six o\'clock');
+  });
 });
